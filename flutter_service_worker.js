@@ -7,7 +7,7 @@ const RESOURCES = {"icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb0489
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
-"flutter_bootstrap.js": "a035f2e31dcda49835ef42b63cf7227f",
+"flutter_bootstrap.js": "623fad564cfc42a3c31eb683e968a6b0",
 "canvaskit/skwasm.worker.js": "89990e8c92bcb123999aa81f7e203b1c",
 "canvaskit/skwasm.wasm": "828c26a0b1cc8eb1adacbdd0c5e8bcfa",
 "canvaskit/chromium/canvaskit.wasm": "ea5ab288728f7200f398f60089048b48",
@@ -31,8 +31,8 @@ const RESOURCES = {"icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb0489
 "assets/fonts/MaterialIcons-Regular.otf": "53469a541d316ed75b5a4e22d294039a",
 "assets/AssetManifest.bin.json": "f3cf18efee86e0e87c601940fbe52c00",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"index.html": "d426b3c31ba1e3c8b0f0046b038158e5",
-"/": "d426b3c31ba1e3c8b0f0046b038158e5",
+"index.html": "fca71fa141e3e1cc6b7b7db497b01438",
+"/": "fca71fa141e3e1cc6b7b7db497b01438",
 "manifest.json": "33725d2c06b59a94a0758aef5018d5c2",
 "flutter.js": "4b2350e14c6650ba82871f60906437ea"};
 // The application shell files that are downloaded before a service worker can
