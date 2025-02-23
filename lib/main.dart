@@ -118,7 +118,6 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
                                 size: 60, // Grootte van het pin-icoon
                               ),
                             ),
-                            // Cirkel achter het icoon
                             Container(
                               width: 50, // Groter dan het icoon
                               height: 50,
@@ -128,7 +127,6 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
                                 border: Border.all(color: Colors.black, width: 3), // Blauwe rand
                               ),
                             ),
-                            // Het telefoonicoon
                             Icon(Icons.phone_android_outlined, color: Colors.black, size: 30),
                           ],
                         ),
@@ -156,7 +154,7 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start, // Teksten links uitlijnen
                   children: [
                     Text(
-                      "Telefoon OMA",
+                      "Google Pixel 9 pro",
                       style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                     Text(
@@ -174,13 +172,13 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
           // Drie knoppen onder elkaar
           Column(
             children: [
-              _buildButton(Icons.volume_up, "Geluid afspelen", Colors.white),
+              _buildButton(Icons.volume_up, "Geluid afspelen"),
               SizedBox(height: 10),
-              _buildButton(Icons.lock_outline, "Apparaat beveiligen", Colors.white),
+              _buildButton(Icons.lock_outline, "Apparaat beveiligen"),
               SizedBox(height: 10),
-              _buildButton(Icons.report, "Markeren als kwijtgeraakt", Colors.white),
+              _buildButton(Icons.report, "Markeren als kwijtgeraakt"),
               SizedBox(height: 10),
-              _buildButton(Icons.share, "Apparaat delen", Colors.white),
+              _buildButton(Icons.share, "Apparaat delen"),
             ],
           ),
         ],
@@ -188,12 +186,12 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
     );
   }
 
-Widget _buildButton(IconData icon, String text, Color color) {
+Widget _buildButton(IconData icon, String text) {
   return SizedBox(
     width: double.infinity, // Volledige breedte
     child: ElevatedButton(
       style: ElevatedButton.styleFrom(
-        backgroundColor: color, // Kleur van de knop
+
         padding: EdgeInsets.symmetric(vertical: 15), // Ruimte binnen de knop
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10), // Mooie afgeronde hoeken
@@ -206,11 +204,11 @@ Widget _buildButton(IconData icon, String text, Color color) {
         mainAxisAlignment: MainAxisAlignment.start, // Zorgt dat alles links staat
         children: [
           SizedBox(width: 20), // Ruimte tussen icoon en tekst
-          Icon(icon,  size: 20, color: Colors.black), // Icoon aan de linkerkant
+          Icon(icon,  size: 20), // Icoon aan de linkerkant
           SizedBox(width: 15), // Ruimte tussen icoon en tekst
           Text(
             text,
-            style: TextStyle(fontSize: 14, color: Colors.black),
+            style: TextStyle(fontSize: 14),
           ),
         ],
       ),
@@ -223,8 +221,14 @@ void main() {
   runApp(MaterialApp(
     title: 'Online Map',
     theme: ThemeData(
+      brightness: Brightness.light,  // Lichte modus
       primarySwatch: Colors.blue,
     ),
+    darkTheme: ThemeData(
+      brightness: Brightness.dark,  // Donkere modus
+      primarySwatch: Colors.grey,  // Je kunt een andere kleur kiezen voor donker thema
+    ),
+    themeMode: ThemeMode.system,  // Schakelt automatisch tussen licht en donker afhankelijk van systeeminstellingen
     home: OnlineMapScreen(),
   ));
 }
