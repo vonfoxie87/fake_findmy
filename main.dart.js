@@ -19114,7 +19114,7 @@ k.aL()
 k.MD(j,j,r)
 s.ay$!==$&&A.an()
 s.ay$=k
-l=k}s.J0(new A.vq(p,new A.t5(new A.tz(j),"Online Map",i,h,B.u2,j),o,l,j))
+l=k}s.J0(new A.vq(p,new A.t5(new A.tz(j),"Apparaat vinden",i,h,B.u2,j),o,l,j))
 s.yY()},
 tz:function tz(a){this.a=a},
 Ip:function Ip(a){var _=this
@@ -57498,7 +57498,7 @@ s=new A.ep(this.b,this.c)
 r.r=s
 r=r.e
 r===$&&A.b()
-r.xm(s,19,!1,null,B.i,B.fs)},
+r.xm(s,18,!1,null,B.i,B.fs)},
 $S:0}
 A.a4s.prototype={
 $0(){},
