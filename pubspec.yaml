@@ -25,6 +25,6 @@ dev_dependencies:
 
 flutter:
   assets:
-    - assets/maps/atlas.mbtiles
+    - assets/favicon.png
 
   uses-material-design: true

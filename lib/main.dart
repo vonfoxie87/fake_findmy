@@ -63,7 +63,7 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
       setState(() {
         _locationFetched = true;
         _currentLocation = LatLng(newLatitude, newLongitude);
-        _mapController.move(_currentLocation, 19);
+        _mapController.move(_currentLocation, 18);
       });
 
       print("Locatie bijgewerkt naar: $_currentLocation");
@@ -219,7 +219,7 @@ Widget _buildButton(IconData icon, String text) {
 
 void main() {
   runApp(MaterialApp(
-    title: 'Online Map',
+    title: 'Apparaat vinden',
     theme: ThemeData(
       brightness: Brightness.light,  // Lichte modus
       primarySwatch: Colors.blue,
