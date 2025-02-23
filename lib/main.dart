@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
@@ -10,6 +11,7 @@ class OnlineMapScreen extends StatefulWidget {
 }
 
 class _OnlineMapScreenState extends State<OnlineMapScreen> {
+  late DateTime _sevenMinutesAgo;
   late MapController _mapController;
   bool _locationFetched = false;
   LatLng _currentLocation = LatLng(52.0026493, 4.3527631);
@@ -18,6 +20,7 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
   @override
   void initState() {
     super.initState();
+    _sevenMinutesAgo = DateTime.now().subtract(Duration(minutes: 7));
     _mapController = MapController();
     _startLocationUpdates();
   }
@@ -77,12 +80,12 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
 
   @override
   Widget build(BuildContext context) {
+    String formattedTime = DateFormat('dd-MM-yyyy HH:mm').format(_sevenMinutesAgo);
     return Scaffold(
       body: Column(
         children: [
-          // Kaart met vaste hoogte van 200px en volledige breedte
           Container(
-            height: 400,
+            height: 350,
             width: double.infinity,
             child: FlutterMap(
               mapController: _mapController,
@@ -154,11 +157,11 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
                   children: [
                     Text(
                       "Telefoon OMA",
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      "Laatst gezien: 7 minuten geleden",
-                      style: TextStyle(fontSize: 14, color: Colors.grey),
+                      "Laatst gezien: $formattedTime",
+                      style: TextStyle(fontSize: 11, color: Colors.grey),
                     ),
                   ],
                 ),
@@ -172,11 +175,11 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
           Column(
             children: [
               _buildButton(Icons.volume_up, "Geluid afspelen", Colors.white),
-              SizedBox(height: 15),
+              SizedBox(height: 10),
               _buildButton(Icons.lock_outline, "Apparaat beveiligen", Colors.white),
-              SizedBox(height: 15),
+              SizedBox(height: 10),
               _buildButton(Icons.report, "Markeren als kwijtgeraakt", Colors.white),
-              SizedBox(height: 15),
+              SizedBox(height: 10),
               _buildButton(Icons.share, "Apparaat delen", Colors.white),
             ],
           ),
@@ -203,11 +206,11 @@ Widget _buildButton(IconData icon, String text, Color color) {
         mainAxisAlignment: MainAxisAlignment.start, // Zorgt dat alles links staat
         children: [
           SizedBox(width: 20), // Ruimte tussen icoon en tekst
-          Icon(icon,  size: 25, color: Colors.black), // Icoon aan de linkerkant
-          SizedBox(width: 20), // Ruimte tussen icoon en tekst
+          Icon(icon,  size: 20, color: Colors.black), // Icoon aan de linkerkant
+          SizedBox(width: 15), // Ruimte tussen icoon en tekst
           Text(
             text,
-            style: TextStyle(fontSize: 16, color: Colors.black),
+            style: TextStyle(fontSize: 14, color: Colors.black),
           ),
         ],
       ),
