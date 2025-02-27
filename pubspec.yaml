@@ -1,0 +1,30 @@
+name: streetwise
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_map: ^7.0.2
+  geolocator: ^9.0.0
+  flutter_map_mbtiles: ^1.0.0
+  latlong2: ^0.9.1
+  flutter_compass: ^0.8.1
+  intl: ^0.20.1
+  cupertino_icons: ^1.0.8
+  path_provider: ^2.0.15
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  assets:
+    - assets/favicon.png
+
+  uses-material-design: true
