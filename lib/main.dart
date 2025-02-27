@@ -92,6 +92,8 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
               options: MapOptions(
                 initialCenter: _currentLocation,
                 initialZoom: 19,
+                interactionOptions: const InteractionOptions(
+                  flags: InteractiveFlag.pinchZoom | InteractiveFlag.drag),
               ),
               children: [
                 TileLayer(
