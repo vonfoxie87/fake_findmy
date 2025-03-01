@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:wave/wave.dart';
 import 'package:flutter/services.dart';
 
 class OnlineMapScreen extends StatefulWidget {
@@ -110,25 +109,25 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
                         height: 100.0,
                         point: LatLng(_currentLocation.latitude, _currentLocation.longitude),
                         child: Transform.translate(
-                          offset: Offset(0, 35), // Verplaats omhoog met de helft van de hoogte
+                          offset: Offset(0, 35),
                           child: Container(
                             decoration: BoxDecoration(
-                              color: Colors.grey.withOpacity(0.4), // Andere kleur voor visueel verschil
+                              color: Colors.grey.withOpacity(0.4),
                               shape: BoxShape.circle,
-                              border: Border.all(color: Colors.blueGrey.withOpacity(0.5), width: 2),
+                              border: Border.all(color: Colors.blueGrey.withOpacity(0.6), width: 2),
                             ),
                           ),
                         ),
                       ),
                       Marker(
-                        width: 80.0,
-                        height: 80.0,
+                        width: 96.0,
+                        height: 96.0,
                         point: _currentLocation,
                         child: Stack(
                           alignment: Alignment.center,
                           children: [
                             Positioned(
-                              bottom: -11,
+                              bottom: 22,
                               height: 85,
                               child: Icon(
                                 Icons.location_on,
@@ -136,16 +135,23 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
                                 size: 60,
                               ),
                             ),
-                            Container(
-                              width: 50,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(1),
-                                shape: BoxShape.circle,
-                                border: Border.all(color: Colors.black, width: 3),
-                              ),
+                            Positioned(
+                              bottom: 45,
+                              child: 
+                                Container(
+                                  width: 50,
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(1),
+                                    shape: BoxShape.circle,
+                                    border: Border.all(color: Colors.black, width: 3),
+                                  ),
+                                ),),
+                              Positioned(
+                                bottom: 56,
+                                child:
+                                  Icon(Icons.phone_android_outlined, color: Colors.black, size: 30),
                             ),
-                            Icon(Icons.phone_android_outlined, color: Colors.black, size: 30),
                           ],
                         ),
                       ),
