@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:wave/wave.dart';
 import 'package:flutter/services.dart';
 
 class OnlineMapScreen extends StatefulWidget {
@@ -21,7 +22,7 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
   @override
   void initState() {
     super.initState();
-    _sevenMinutesAgo = DateTime.now().subtract(Duration(minutes: 7));
+    _sevenMinutesAgo = DateTime.now().subtract(Duration(minutes: 11));
     _mapController = MapController();
     _startLocationUpdates();
   }
@@ -81,7 +82,7 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
 
   @override
   Widget build(BuildContext context) {
-    String formattedTime = DateFormat('dd-MM-yyyy HH:mm').format(_sevenMinutesAgo);
+    String formattedTime = DateFormat('HH:mm').format(_sevenMinutesAgo);
     return Scaffold(
       body: Column(
         children: [
@@ -172,7 +173,7 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
                       style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      "Laatst gezien: $formattedTime",
+                      "Laatst gezien: Vandaag $formattedTime",
                       style: TextStyle(fontSize: 11, color: Colors.grey),
                     ),
                   ],
@@ -204,7 +205,6 @@ Widget _buildButton(IconData icon, String text) {
     width: double.infinity,
     child: ElevatedButton(
       style: ElevatedButton.styleFrom(
-
         padding: EdgeInsets.symmetric(vertical: 15),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
@@ -239,10 +239,9 @@ Widget _buildButton(IconData icon, String text) {
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent, // Maakt de statusbalk transparant
-    statusBarIconBrightness: Brightness.dark, // Pas de kleur van iconen aan (donker of licht)
+    statusBarColor: Colors.transparent,
+    statusBarIconBrightness: Brightness.dark,
   ));
-  
   runApp(MaterialApp(
     title: 'Apparaat vinden',
     theme: ThemeData(
