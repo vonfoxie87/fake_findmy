@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:flutter/services.dart';
 
 class OnlineMapScreen extends StatefulWidget {
   @override
@@ -237,6 +238,11 @@ Widget _buildButton(IconData icon, String text) {
 }
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent, // Maakt de statusbalk transparant
+    statusBarIconBrightness: Brightness.dark, // Pas de kleur van iconen aan (donker of licht)
+  ));
+  
   runApp(MaterialApp(
     title: 'Apparaat vinden',
     theme: ThemeData(
@@ -249,7 +255,7 @@ void main() {
     darkTheme: ThemeData(
       brightness: Brightness.dark,
       textTheme: const TextTheme(
-        bodyMedium: TextStyle(color: Colors.white), // Voor donkere modus
+        bodyMedium: TextStyle(color: Colors.white),
       ),
       primarySwatch: Colors.grey,
     ),
