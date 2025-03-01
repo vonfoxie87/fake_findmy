@@ -105,11 +105,11 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
                   MarkerLayer(
                     markers: [
                       Marker(
-                        width: 100.0,
-                        height: 100.0,
+                        width: 120.0,
+                        height: 120.0,
                         point: LatLng(_currentLocation.latitude, _currentLocation.longitude),
                         child: Transform.translate(
-                          offset: Offset(0, 35),
+                          offset: Offset(0, 45),
                           child: Container(
                             decoration: BoxDecoration(
                               color: Colors.grey.withOpacity(0.4),
