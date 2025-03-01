@@ -16,7 +16,7 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
   late DateTime _sevenMinutesAgo;
   late MapController _mapController;
   bool _locationFetched = false;
-  LatLng _currentLocation = LatLng(52.31111, 3.29251);
+  LatLng _currentLocation = LatLng(52.31511, 3.29251);
   Timer? _locationTimer;
 
   @override
