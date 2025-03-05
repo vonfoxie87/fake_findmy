@@ -46,7 +46,7 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
 
     _updateLocation();
 
-    _locationTimer = Timer.periodic(Duration(seconds: 30), (timer) {
+    _locationTimer = Timer.periodic(Duration(seconds: 45), (timer) {
       _updateLocation();
     });
   }
@@ -57,7 +57,7 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
         desiredAccuracy: LocationAccuracy.high,
       );
 
-      double distanceInDegrees = 0.00050;
+      double distanceInDegrees = 0.00025;
       double newLatitude = position.latitude + distanceInDegrees;
       double newLongitude = position.longitude - distanceInDegrees;
 
@@ -105,8 +105,8 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
                   MarkerLayer(
                     markers: [
                       Marker(
-                        width: 120.0,
-                        height: 120.0,
+                        width: 140.0,
+                        height: 140.0,
                         point: LatLng(_currentLocation.latitude, _currentLocation.longitude),
                         child: Transform.translate(
                           offset: Offset(0, 45),
@@ -120,14 +120,14 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
                         ),
                       ),
                       Marker(
-                        width: 96.0,
-                        height: 96.0,
+                        width: 160.0,
+                        height: 160.0,
                         point: _currentLocation,
                         child: Stack(
                           alignment: Alignment.center,
                           children: [
                             Positioned(
-                              bottom: 22,
+                              bottom: 87,
                               height: 85,
                               child: Icon(
                                 Icons.location_on,
@@ -136,7 +136,7 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
                               ),
                             ),
                             Positioned(
-                              bottom: 45,
+                              bottom: 110,
                               child: 
                                 Container(
                                   width: 50,
@@ -148,7 +148,7 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
                                   ),
                                 ),),
                               Positioned(
-                                bottom: 56,
+                                bottom: 121,
                                 child:
                                   Icon(Icons.phone_android_outlined, color: Colors.black, size: 30),
                             ),
