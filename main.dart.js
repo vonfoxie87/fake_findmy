@@ -32513,7 +32513,7 @@ s=1
 break}case 6:if(o===B.dz){q=A.rl("Locatiepermissies zijn permanent geweigerd.",null,t.H)
 s=1
 break}p.mv()
-p.w=A.apq(A.dh(0,0,0,30),new A.a4y(p))
+p.w=A.apq(A.dh(0,0,0,45),new A.a4y(p))
 case 1:return A.K(q,r)}})
 return A.L($async$kx,r)},
 mv(){var s=0,r=A.M(t.H),q=1,p,o=this,n,m,l,k,j,i,h,g
@@ -32525,7 +32525,7 @@ else i.b=new A.rW(B.je,0,null)
 s=6
 return A.S($.MA().hP(0,i.b0()),$async$mv)
 case 6:n=b
-m=0.0005
+m=0.00025
 l=n.a+m
 k=n.b-m
 o.b_(new A.a4z(o,l,k))
@@ -32574,9 +32574,9 @@ q=t.nA
 r=A.a([r],q)
 if(n.f){p=n.r
 o=A.Oh(m,new A.h5(A.c3(102,B.cz.gp(0)>>>16&255,B.cz.gp(0)>>>8&255,B.cz.gp(0)&255),m,A.abQ(A.c3(153,B.fB.gp(0)>>>16&255,B.fB.gp(0)>>>8&255,B.fB.gp(0)&255),2),m,m,m,B.cW),m,m,m,m)
-p=A.adG(new A.oi(A.a9m(0,45,0),m,!0,m,o,m),120,new A.dZ(p.a,p.b),120)
+p=A.adG(new A.oi(A.a9m(0,45,0),m,!0,m,o,m),140,new A.dZ(p.a,p.b),140)
 o=n.r
-r.push(new A.BU(A.a([p,A.adG(A.o6(B.a9,A.a([A.tQ(22,A.RJ(B.y0,B.m,60),85,m,m,m,m,m),A.tQ(45,A.Oh(m,new A.h5(A.c3(255,B.j.gp(0)>>>16&255,B.j.gp(0)>>>8&255,B.j.gp(0)&255),m,A.abQ(B.m,3),m,m,m,B.cW),50,m,m,50),m,m,m,m,m,m),A.tQ(56,A.RJ(B.y6,B.m,30),m,m,m,m,m,m)],q),B.bR),96,o,96)],t.qn),m))}return new A.uk(A.a8y(A.a([A.Oh(new A.rf(r,new A.nx(l,19,B.ys),k,m),m,350,m,m,1/0),A.iE(m,20,m),A.Oh(A.aew(A.a([A.RJ(B.y2,B.dO,40),A.iE(m,m,10),A.a8y(A.a([A.a9U("Google Pixel 9 pro",A.k3(m,m,m,m,m,m,m,m,m,m,m,16,m,m,B.f5,m,m,!0,m,m,m,m,m,m,m,m)),A.a9U("Laatst gezien: Vandaag "+s,A.k3(m,m,B.cz,m,m,m,m,m,m,m,m,11,m,m,m,m,m,!0,m,m,m,m,m,m,m,m))],q),B.aX)],q),B.b7,B.dJ),m,m,m,new A.bn(20,0,20,0),1/0),A.iE(m,40,m),A.a8y(A.a([n.os(B.y5,"Geluid afspelen"),A.iE(m,10,m),n.os(B.y1,"Apparaat beveiligen"),A.iE(m,10,m),n.os(B.y3,"Markeren als kwijtgeraakt"),A.iE(m,10,m),n.os(B.y4,"Apparaat delen")],q),B.aY)],q),B.aY),m)},
+r.push(new A.BU(A.a([p,A.adG(A.o6(B.a9,A.a([A.tQ(87,A.RJ(B.y0,B.m,60),85,m,m,m,m,m),A.tQ(110,A.Oh(m,new A.h5(A.c3(255,B.j.gp(0)>>>16&255,B.j.gp(0)>>>8&255,B.j.gp(0)&255),m,A.abQ(B.m,3),m,m,m,B.cW),50,m,m,50),m,m,m,m,m,m),A.tQ(121,A.RJ(B.y6,B.m,30),m,m,m,m,m,m)],q),B.bR),160,o,160)],t.qn),m))}return new A.uk(A.a8y(A.a([A.Oh(new A.rf(r,new A.nx(l,19,B.ys),k,m),m,350,m,m,1/0),A.iE(m,20,m),A.Oh(A.aew(A.a([A.RJ(B.y2,B.dO,40),A.iE(m,m,10),A.a8y(A.a([A.a9U("Google Pixel 9 pro",A.k3(m,m,m,m,m,m,m,m,m,m,m,16,m,m,B.f5,m,m,!0,m,m,m,m,m,m,m,m)),A.a9U("Laatst gezien: Vandaag "+s,A.k3(m,m,B.cz,m,m,m,m,m,m,m,m,11,m,m,m,m,m,!0,m,m,m,m,m,m,m,m))],q),B.aX)],q),B.b7,B.dJ),m,m,m,new A.bn(20,0,20,0),1/0),A.iE(m,40,m),A.a8y(A.a([n.os(B.y5,"Geluid afspelen"),A.iE(m,10,m),n.os(B.y1,"Apparaat beveiligen"),A.iE(m,10,m),n.os(B.y3,"Markeren als kwijtgeraakt"),A.iE(m,10,m),n.os(B.y4,"Apparaat delen")],q),B.aY)],q),B.aY),m)},
 os(a,b){var s,r,q=null,p=A.am5(q,q,q,q,q,q,q,q,q,q,q,q,new A.bn(0,15,0,15),q,new A.d2(A.a8o(10),B.q),q,q,q,q),o=A.iE(q,q,20),n=this.c
 n.toString
 s=A.RJ(a,A.bW(n).ax.a===B.S?B.j:B.m,20)
