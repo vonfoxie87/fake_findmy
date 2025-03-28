@@ -57,7 +57,7 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
         desiredAccuracy: LocationAccuracy.high,
       );
 
-      double distanceInDegrees = 0.00025;
+      double distanceInDegrees = 0.000;
       double newLatitude = position.latitude + distanceInDegrees;
       double newLongitude = position.longitude - distanceInDegrees;
 
