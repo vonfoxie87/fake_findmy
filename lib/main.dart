@@ -109,7 +109,7 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
                         height: 140.0,
                         point: LatLng(_currentLocation.latitude, _currentLocation.longitude),
                         child: Transform.translate(
-                          offset: Offset(0, 45),
+                          offset: Offset(0, 0),
                           child: Container(
                             decoration: BoxDecoration(
                               color: Colors.grey.withOpacity(0.4),
@@ -120,39 +120,11 @@ class _OnlineMapScreenState extends State<OnlineMapScreen> {
                         ),
                       ),
                       Marker(
-                        width: 160.0,
-                        height: 160.0,
+                        width: 110.0,
+                        height: 110.0,
                         point: _currentLocation,
                         child: Stack(
                           alignment: Alignment.center,
-                          children: [
-                            Positioned(
-                              bottom: 87,
-                              height: 85,
-                              child: Icon(
-                                Icons.location_on,
-                                color: Colors.black,
-                                size: 60,
-                              ),
-                            ),
-                            Positioned(
-                              bottom: 110,
-                              child: 
-                                Container(
-                                  width: 50,
-                                  height: 50,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white.withOpacity(1),
-                                    shape: BoxShape.circle,
-                                    border: Border.all(color: Colors.black, width: 3),
-                                  ),
-                                ),),
-                              Positioned(
-                                bottom: 121,
-                                child:
-                                  Icon(Icons.phone_android_outlined, color: Colors.black, size: 30),
-                            ),
-                          ],
                         ),
                       ),
                     ]
